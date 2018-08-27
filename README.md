@@ -1,2 +1,2 @@
-#Influx UDF Configuration
+# Influx UDF Configuration
 
