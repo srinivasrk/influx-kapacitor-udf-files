@@ -19,9 +19,6 @@ RUN apt-get -qq install -y git
 # Install kapacitor agent
 RUN git clone https://github.com/influxdata/kapacitor.git /tmp/kapacitor_udf/kapacitor
 
-# Copy UDFs
-COPY ./kapacitor/kapacitor_udf /tmp/kapacitor_udf
-
 # Start kapacitor service (log-level: debug | info | error)
 CMD ["kapacitord","-log-file","/etc/kapacitor/kapacitor.log","-log-level","info"]
 
